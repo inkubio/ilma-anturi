@@ -61,32 +61,32 @@ def read_measurement(ser):
 
 def temperature_str(meas):
     """ Pick temperature characters from measurement line."""
-    ret = 'Temp: {}C'.format(meas[3:8])
+    ret = 'Temp: {}C'.format(meas[3:8].decode())
     return ret
 
 def temperature_num(meas):
     """ Pick temperature as number from measurement line."""
-    ret = '{}'.format(meas[3:8])
+    ret = '{}'.format(meas[3:8].decode())
     return float(ret)
 
 def co2_str(meas):
     """ Pick CO2 concentration characters from measurement line."""
-    ret = 'CO2: {}ppm'.format(meas[17:21])
+    ret = 'CO2: {}ppm'.format(meas[17:21].decode())
     return ret
 
 def co2_num(meas):
     """ Pick temperature as number from measurement line."""
-    ret = '{}'.format(meas[17:21])
+    ret = '{}'.format(meas[17:21].decode())
     return int(ret)
 
 def humidity_str(meas):
     """ Pick relative humidity characters from measurement line."""
-    ret = 'Humidity: {}%'.format(meas[30:35])
+    ret = 'Humidity: {}%'.format(meas[30:35].decode())
     return ret
 
 def humidity_num(meas):
     """ Pick relative humidity as number from measurement line."""
-    ret = '{}'.format(meas[30:35])
+    ret = '{}'.format(meas[30:35].decode())
     return float(ret)
 
 def save_data(data):
