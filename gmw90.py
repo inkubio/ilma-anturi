@@ -95,7 +95,7 @@ def save_data(data):
     Parameters:
         data: string containing data row to write in csv format"""
     now = datetime.datetime.now()
-    with open('./data/{}-{}.csv'.format(now.month, now.year), 'a') as f:
+    with open('./data/{}-{}.csv'.format(now.year, now.month), 'a') as f:
         for item in data:
             f.write('{}\n'.format(item))
 
